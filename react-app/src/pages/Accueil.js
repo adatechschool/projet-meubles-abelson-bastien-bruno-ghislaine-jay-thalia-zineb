@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import BarreNav from '../components/BarreNav';
 
 
 const Accueil = () => {
     return (
         <div>
-            <Navigation />
+            <BarreNav />
             <h1>ACCUEIL</h1>  
         </div>
     );

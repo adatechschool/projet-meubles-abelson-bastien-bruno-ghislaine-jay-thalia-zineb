@@ -6,8 +6,10 @@ import Accueil from "./pages/Accueil";
 import Admin from "./pages/Admin";
 import Apropos from "./pages/Apropos";
 import DetailsProduit from "./pages/DetailsProduit";
+import Panier from "./pages/Panier";
+import Login from "./pages/Login";
 
-import BarreNav from "./components/BarreNav";
+// import BarreNav from "./components/BarreNav";
 
 function App() {
   return (
@@ -15,10 +17,11 @@ function App() {
     <Routes>
 
       <Route path="/" element={<Accueil/>}/>
-      <BarreNav />
       <Route path="/detailsproduit" element={<DetailsProduit/>}/>
       <Route path="/apropos" element={<Apropos/>}/>
       <Route path="/admin" element={<Admin/>}/>
+      <Route path="/panier" element={<Panier/>}/>
+      <Route path="/login" element={<Login/>}/>
 
     </Routes> 
     </BrowserRouter>
