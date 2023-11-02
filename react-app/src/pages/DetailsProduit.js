@@ -1,11 +1,11 @@
 import React from 'react';
 import Carroussel from '../components/Carroussel';
-import Navigation from '../components/Navigation';
+import BarreNav from '../components/BarreNav';
 
 const DetailsProduit = () => {
     return (
         <div>
-             <Navigation />
+             <BarreNav />
             <h1>DETAILS DU PRODUIT</h1>
             <Carroussel/>
            

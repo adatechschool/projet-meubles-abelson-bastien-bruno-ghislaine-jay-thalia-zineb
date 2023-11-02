@@ -1,22 +1,81 @@
 import React from "react";
-import BoutonAchat from "../components/BoutonAchat";
 import Navigation from "../components/Navigation";
+import BarreNav from "../components/BarreNav";
 
 const Apropos = () => {
   return (
     <div>
-       <Navigation />
-      <h1>A propos</h1>
-      <br/>
-      <p>
+       <BarreNav />
+       <h1>
         Bienvenue sur (Nom du Site), votre destination en ligne pour trouver des
         meubles de seconde main de qualité et abordables.
+      </h1>
+      <p>
+        Nous sommes ravis de vous présenter notre plateforme dédiée à la
+        découverte de trésors cachés qui peuvent transformer votre espace de
+        vie.
       </p>
-      <br/>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, adipisci assumenda. Nobis, aliquid? Blanditiis fuga dolorem doloremque a ea assumenda quidem non corrupti quasi optio, repellendus laudantium natus inventore, sunt asperiores ullam consequuntur iure error hic consequatur quas fugiat odio excepturi? Est eius perspiciatis doloribus nemo esse facilis voluptatibus, molestiae, porro, modi laboriosam enim sint harum officiis. Amet iusto vitae enim, officia unde, est voluptatum optio incidunt eligendi nesciunt modi soluta necessitatibus perspiciatis harum sequi quia sed nobis exercitationem animi eveniet fugit commodi totam. Id et corrupti dolor obcaecati culpa eveniet, ex blanditiis sit, recusandae nesciunt, facilis architecto corporis illum.</p>
-     
-      <BoutonAchat />
-    </div>
+      <h2>Notre Histoire</h2>
+      <p>
+        (nom du site) a vu le jour de la passion pour la durabilité, le design
+        intemporel et le désir de rendre les meubles de qualité accessibles à
+        tous. Notre équipe est composée de passionnés de mobilier, de durabilité
+        et de style, et nous mettons cette passion au service de nos clients.
+      </p>
+      <h2>Notre Mission</h2>
+      <p>
+        Chez (Nom du Site), notre mission est de promouvoir la réutilisation et
+        la réduction de l'impact environnemental en donnant une seconde vie aux
+        meubles. Nous croyons fermement que chaque meuble mérite une nouvelle
+        chance de briller et d'embellir un foyer. Nous sommes déterminés à
+        contribuer à un mode de vie plus respectueux de la planète en favorisant
+        l'achat de meubles de seconde main.
+      </p>
+      <h2>Notre Sélection</h2>
+      <p>
+        Notre équipe parcourt régulièrement les marchés, les brocantes et les
+        ventes aux enchères pour dénicher des meubles de qualité, allant des
+        classiques du design aux pièces vintage uniques. Chaque article que vous
+        trouverez sur [Nom du Site] a été soigneusement sélectionné, restauré si
+        nécessaire, et est prêt à retrouver sa place dans votre intérieur.
+      </p>
+      <h2>Pourquoi Choisir (Nom du Site) ?</h2>
+      <p>
+        <ul>
+          <li>
+            Durabilité : En achetant des meubles de seconde main, vous
+            contribuez à réduire la demande de nouveaux meubles, ce qui est
+            bénéfique pour l'environnement.
+          </li>
+          <li>
+            Qualité : Nous ne proposons que des meubles de haute qualité qui ont
+            été inspectés et restaurés avec soin.
+          </li>
+          <li>
+            Variété : Notre sélection comprend une grande variété de styles, de
+            marques et d'époques pour répondre à tous les goûts.
+          </li>
+          <li>
+            Accessibilité : Nos prix compétitifs rendent les meubles de qualité
+            accessibles à tous les budgets.
+          </li>
+          <li>
+            Service Client : Notre équipe est là pour vous aider à trouver le
+            meuble parfait et répondre à toutes vos questions.
+          </li>
+        </ul>
+        Nous espérons que vous apprécierez votre expérience de shopping sur [Nom
+        du Site]. Explorez notre catalogue et trouvez le meuble idéal pour votre
+        maison tout en contribuant à la préservation de notre planète. Merci de
+        faire partie de notre mission pour un avenir plus durable et élégant.
+        <br />
+        N'hésitez pas à nous contacter si vous avez des questions ou des
+        commentaires. Nous sommes impatients de vous accompagner dans votre
+        voyage à la découverte de meubles uniques et de seconde main.
+        <br />
+        Bienvenue chez [Nom du Site] - où le style rencontre la durabilité !
+      </p>
+      </div>
   );
 };
 
