@@ -2,91 +2,142 @@
 beige #F0EAD2
 vert clair #DDE5B6
 vert #ADC178
-marron #ADC178
+marron #A98467
 marron foncé #6C584C
 */
 
+* {
+  /* background-color: #F0EAD2; */
+}
+
+/* barre de nav */
+header {
+  background-color: #A98467;
+  display: flex;
+  width: 80em;
+  margin: 0 auto 2em auto;
+  padding: 0;
+}
+
+header img {
+  height: 5em;
+}
+
+header #menu {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  border-left: 1px solid #dde5b6;
+  background-color: #A98467;
+  color: #F0EAD2;
+}
+
+h1 {
+  font-family: "Cairo Play", sans-serif;
+  text-align: center;
+  padding-top: 0.5em;
+  flex: 4;
+}
+
+header #menu a {
+  flex: 1;
+  text-align: center;
+  padding-top: 2em;
+  border-right: 1px solid #dde5b6;
+  background-color: #A98467;
+  color: #F0EAD2;
+}
+
+header #menu a:hover {
+  background-color: #F0EAD2;
+  color: #A98467;
+}
+
+header ul {
+  list-style: none;
+}
+
 /* bouton supprimer */
 .btn-suppr {
-    background-color: transparent;
-    position: relative;
-    border: none;
-  }
-  
-  .btn-suppr::after {
-    content: 'delete';
-    position: absolute;
-    top: -130%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    height: fit-content;
-    background-color: rgb(168, 7, 7);
-    padding: 4px 8px;
-    border-radius: 5px;
-    transition: .2s linear;
-    transition-delay: .2s;
-    color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .icon-suppr {
-    transform: scale(1.2);
-    transition: .2s linear;
-  }
-  
-  .btn-suppr:hover > .icon-suppr {
-    transform: scale(1.5);
-  }
-  
-  .btn-suppr:hover > .icon-suppr path {
-    fill: rgb(168, 7, 7);
-  }
-  
-  .btn-suppr:hover::after {
-    visibility: visible;
-    opacity: 1;
-    top: -160%;
-  }
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+.btn-suppr::after {
+  content: "delete";
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(168, 7, 7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: 0.2s linear;
+  transition-delay: 0.2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icon-suppr {
+  transform: scale(1.2);
+  transition: 0.2s linear;
+}
+
+.btn-suppr:hover > .icon-suppr {
+  transform: scale(1.5);
+}
+
+.btn-suppr:hover > .icon-suppr path {
+  fill: rgb(168, 7, 7);
+}
+
+.btn-suppr:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+}
 
 /* bouton acheter */
 .button-achat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 15px;
-    gap: 15px;
-    background-color: #6C584C;
-    outline: 3px #6C584C solid;
-    outline-offset: -3px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 400ms;
-  }
-  
-  .button-achat .button-acheter {
-    color: #F0EAD2;
-    font-weight: 700;
-    font-size: 1em;
-    transition: 400ms;
-  }
-  
-  .button-achat svg path {
-    transition: 400ms;
-  }
-  
-  .button-achat:hover {
-    background-color: transparent;
-  }
-  
-  .button-achat:hover .button-acheter {
-    color: #6C584C;
-  }
-  
-  .button-achat:hover svg path {
-    fill: #6C584C;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #6c584c;
+  outline: 3px #6c584c solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button-achat .button-acheter {
+  color: #f0ead2;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button-achat svg path {
+  transition: 400ms;
+}
+
+.button-achat:hover {
+  background-color: transparent;
+}
+
+.button-achat:hover .button-acheter {
+  color: #6c584c;
+}
+
+.button-achat:hover svg path {
+  fill: #6c584c;
+}
