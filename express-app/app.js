@@ -7,6 +7,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+// pour lire les variables du fichier .env
+require('dotenv').config();
+
+const mongoose = require('mongoose');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -72,10 +76,7 @@ app.get("/api/meuble", async (req, res) => {
 
 module.exports = app;
 
-// pour lire les variables du fichier .env
-require('dotenv').config();
 
-const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));
 
@@ -95,33 +96,33 @@ async function main() {
 
   // création des différents meubles
   const firstMeuble = new Meuble({
-    id: 1,
-    name: "Bureau gamer Sköptuflund",
-    type: "Bureau",
-    price: 299,
-    materials: ["acier", "panneau de particules", "feuille de mélamine"],
-    colors: ["noir"],
-    size: "185x74x146"
+    id: 7,
+    name: "Etagère Kallax",
+    type: "Etagère",
+    price: 74,
+    materials: ["panneau de particules", "feuille de mélamine"],
+    colors: ["blanc"],
+    size: "77x147"
   });
 
   const secondMeuble = new Meuble({
-    id: 2,
-    name: "Canapé d'angle 5 places Ländskrona",
-    type: "Canapé",
-    price: 1299,
-    materials: ["contreplaqué", "panneau de particules", "bois", "mousse polyuréthane"],
-    colors: ["gris foncé"],
-    size: "241/281x89x78"
+    id: 8,
+    name: "Banc TV Besta",
+    type: "Banc TV",
+    price: 182,
+    materials: ["contreplaqué", "panneau de particules"],
+    colors: ["blanc brillant","chêne blanchi"],
+    size: "120x42x39"
   });
 
   const thirdMeuble = new Meuble({
-    id: 3,
-    name: "Dressing avec portes coulissantes et mirroir Skytta",
-    type: "Dressing",
-    price: 1017,
-    materials: ["aluminium", "verre", "pin massif", "acier"],
-    colors: ["gris", "blanc"],
-    size: "251x115x240"
+    id: 9,
+    name: "Fauteil Pello",
+    type: "Fauteil",
+    price: 69,
+    materials: ["Placage bois lamellé-collé, placage bouleau, vernis acrylique incolore", "tissu", "acier"],
+    colors: ["gris", "beige","noir"],
+    size: "96x85x50"
   });
 
   console.log(firstMeuble, secondMeuble, thirdMeuble);
