@@ -1,14 +1,25 @@
 import React from "react";
-import BoutonAchat from "./components/BoutonAchat";
-import BoutonSuppr from "./components/BoutonSuppr";
+import {BrowserRouter,Routes, Route} from "react-router-dom";
+// import BoutonAchat from "./components/BoutonAchat";
+// import BoutonSuppr from "./components/BoutonSuppr";
+import Accueil from "./pages/Accueil";
+import Admin from "./pages/Admin";
+import Apropos from "./pages/Apropos";
+import DetailsProduit from "./pages/DetailsProduit";
+
 
 function App() {
   return (
-<div>
-      <BoutonAchat />
-      <br />
-      <BoutonSuppr />
-</div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Accueil/>}/>
+      <Route path="/detailsproduit" element={<DetailsProduit/>}/>
+      <Route path="/apropos" element={<Apropos/>}/>
+      <Route path="/admin" element={<Admin/>}/>
+
+    </Routes> 
+    </BrowserRouter>
+
   );
 }
 
