@@ -1,11 +1,14 @@
+import React from "react";
+import BoutonAchat from "./components/BoutonAchat";
+import BoutonSuppr from "./components/BoutonSuppr";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-      </header>
-    </div>
+<div>
+      <BoutonAchat />
+      <br />
+      <BoutonSuppr />
+</div>
   );
 }
 
