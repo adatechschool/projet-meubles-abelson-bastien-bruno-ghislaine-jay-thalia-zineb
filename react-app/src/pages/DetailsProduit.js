@@ -1,4 +1,5 @@
 import React from 'react';
+import Carroussel from '../components/Carroussel';
 import Navigation from '../components/Navigation';
 
 const DetailsProduit = () => {
@@ -6,8 +7,9 @@ const DetailsProduit = () => {
         <div>
              <Navigation />
             <h1>DETAILS DU PRODUIT</h1>
-
-        </div>
+            <Carroussel/>
+           
+         </div>
        
     );
 };
