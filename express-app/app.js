@@ -128,4 +128,12 @@ async function main() {
   await firstMeuble.save();
   await secondMeuble.save();
   await thirdMeuble.save();
+
+    try {
+        const updateBureau = await collection.updateOne({ name: "Bureau gamer Sköptuflun" }, {
+        $set: { images: ["", "blanc"] }
+        });
+        console.log(await updateBureau);
+    } catch(e) {throw e; }
+
 }
