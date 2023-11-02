@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles.css'
-import 'bootstrap/dist/css/bootstrap.css'
-import logo from '../assets/images/logo_meubles.png'
+import '../styles.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import logo from '../assets/images/logo_meubles.png';
 import { NavLink } from "react-router-dom";
 
 const BarreNav = () => {
