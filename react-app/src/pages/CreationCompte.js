@@ -6,7 +6,7 @@ const CreationCompte = () => {
     return (
         <div>
             <BarreNav />
-            <h1>Création de votre compte</h1>
+            <h2>Création de votre compte</h2>
             <br />
             <br />
             <CreationCompteForm />

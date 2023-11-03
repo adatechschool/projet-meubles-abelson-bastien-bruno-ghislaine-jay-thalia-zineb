@@ -13,7 +13,7 @@ const DetailsProduit = () => {
             </div>
 
             <div>
-            <h1>Fauteuil en bois et cannage</h1>
+            <h2>Fauteuil en bois et cannage</h2>
             <br/>
             <p>Détails du produit</p>
           

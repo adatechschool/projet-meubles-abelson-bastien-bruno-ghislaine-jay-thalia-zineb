@@ -8,7 +8,7 @@ const Accueil = () => {
     return (
         <div>       
             <BarreNav />
-            <h1>ACCUEIL</h1>
+            <h2>ACCUEIL</h2>
             <div id="cartes-produits">
             <CarteProduit />
             <CarteProduit />

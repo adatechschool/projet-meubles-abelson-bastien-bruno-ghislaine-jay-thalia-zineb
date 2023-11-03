@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap');
+
 /* 
 beige #F0EAD2
 vert clair #DDE5B6
@@ -8,7 +10,9 @@ marron foncé #6C584C
 
 * {
   background-color: #F0EAD2;
+   font-family: 'Lora', serif;
 }
+
 
 /* barre de nav */
 header {
@@ -36,15 +40,23 @@ header img {
 header h1 {
   background-color: #A98467;
   border-right: 1px solid #dde5b6;
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 0.5em;
+  flex: 4;
+
 }
 
 header #menu a {
   flex: 1;
   text-align: center;
-  padding-top: 2em;
+  padding-top: 1em;
   border-right: 1px solid #dde5b6;
   background-color: #A98467;
   color: #F0EAD2;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 header #menu a:hover {
@@ -58,7 +70,7 @@ header ul {
 
 
 /* titres */
-h1 {
+h2 {
   font-family: "Cairo Play", sans-serif;
   text-align: center;
   padding-top: 0.5em;

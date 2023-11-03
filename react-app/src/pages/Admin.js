@@ -5,7 +5,7 @@ const Admin = () => {
     return (
       <div>
           <BarreNav />
-          <h1>ADMIN</h1>
+          <h2>ADMIN</h2>
       </div>
       
     );

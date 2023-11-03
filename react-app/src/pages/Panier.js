@@ -7,7 +7,7 @@ const Panier = () => {
     return (
         <div>
             <BarreNav />
-            <h1>Mon panier</h1>
+            <h2>Mon panier</h2>
             <PanierForm />  
         </div>
     );

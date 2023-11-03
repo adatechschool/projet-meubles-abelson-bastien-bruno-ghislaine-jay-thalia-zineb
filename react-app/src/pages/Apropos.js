@@ -6,11 +6,11 @@ const Apropos = () => {
     <div>
        <BarreNav />
        <div id="a-propos">
-       <h1>
+       <h2>
         Bienvenue sur (Nom du Site), 
         <br />votre destination en ligne pour trouver des
         meubles de seconde main de qualité et abordables
-      </h1>
+      </h2>
       <br />
       <p>
         Nous sommes ravis de vous présenter notre plateforme dédiée à la
