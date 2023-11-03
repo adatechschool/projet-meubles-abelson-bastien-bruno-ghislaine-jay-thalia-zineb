@@ -7,7 +7,7 @@ marron foncé #6C584C
 */
 
 * {
-  /* background-color: #F0EAD2; */
+  background-color: #F0EAD2;
 }
 
 /* barre de nav */
@@ -21,9 +21,10 @@ header {
 
 header img {
   height: 5em;
+  background-color: #A98467;
 }
 
-header #menu {
+#menu {
   display: flex;
   width: 100%;
   align-items: stretch;
@@ -32,11 +33,9 @@ header #menu {
   color: #F0EAD2;
 }
 
-h1 {
-  font-family: "Cairo Play", sans-serif;
-  text-align: center;
-  padding-top: 0.5em;
-  flex: 4;
+header h1 {
+  background-color: #A98467;
+  border-right: 1px solid #dde5b6;
 }
 
 header #menu a {
@@ -49,12 +48,21 @@ header #menu a {
 }
 
 header #menu a:hover {
-  background-color: #F0EAD2;
-  color: #A98467;
+  background-color: #6C584C;
+  color: white;
 }
 
 header ul {
   list-style: none;
+}
+
+
+/* titres */
+h1 {
+  font-family: "Cairo Play", sans-serif;
+  text-align: center;
+  padding-top: 0.5em;
+  flex: 4;
 }
 
 /* bouton supprimer */
@@ -184,21 +192,34 @@ header ul {
 }
 
 .button-achat .button-acheter {
-  color: #f0ead2;
+  color: white;
+  background-color: #6c584c;
   font-weight: 700;
   font-size: 1em;
   transition: 400ms;
+  margin: 0 auto;
 }
 
 .button-achat svg path {
   transition: 400ms;
 }
 
+.button-achat svg {
+  background-color: #6c584c;
+}
+
+.button-achat:hover svg {
+  background-color: white;
+  color: #6c584c;
+}
+
 .button-achat:hover {
-  background-color: transparent;
+  background-color: white;
+  color: #6c584c;
 }
 
 .button-achat:hover .button-acheter {
+  background-color: white;
   color: #6c584c;
 }
 
@@ -292,4 +313,10 @@ header ul {
   width: 85%;
   padding: 1em;
   margin: 0 auto;
+}
+
+/* page accueil */
+#cartes-produits {
+  display: flex;
+  justify-content: space-around;
 }
