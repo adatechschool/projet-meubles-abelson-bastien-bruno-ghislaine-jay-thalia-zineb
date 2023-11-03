@@ -7,7 +7,14 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.2",
+<<<<<<< HEAD
     "mdb-react-ui-kit": "^6.3.0",
+=======
+<<<<<<< HEAD
+    "mdb-ui-kit": "^6.4.2",
+=======
+>>>>>>> f624ac646a884cbe8d07ab8ca1c46a7701ac5acf
+>>>>>>> e774656adb38801a43f2f452d388a2894565bfad
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
