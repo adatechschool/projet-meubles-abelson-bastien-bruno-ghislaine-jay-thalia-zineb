@@ -74,7 +74,7 @@ app.get("/api/meuble", async (req, res) => {
     } 
 });
 
-app.put('/api/update/:id', (req, res) => {
+app.put('/api/update/:id', async (req, res) => {
      const client = new MongoClient(uri);   
      const database = client.db('meubles');
      const collection = database.collection('meubles')
@@ -83,16 +83,24 @@ app.put('/api/update/:id', (req, res) => {
             console.log("toto");
             console.log(req.body);
             console.log("tata");
-    collection.updateOne({ id:Number(id) }, { $set: miseAJour }, (err, res) => {
-      if (err) {
-        console.error('Erreur lors de la mise à jour', err);
-        res.status(500).json({ 'message': 'Erreur lors de la mise à jour.' });
-        return;
-      }
+    await collection.updateOne({ id:Number(id) }, { $set: miseAJour } );
       res.json({ 'message': 'Mise à jour réussie.' });
     });
-  });
+  
 
+  app.delete('/api/delete/:id',async (req, res) => {
+    const client = new MongoClient(uri);   
+     const database = client.db('meubles');
+     const collection = database.collection('meubles')
+    const id =  req.params.id;
+    await collection.deleteOne({ id:Number(id) })
+      
+      console.log('Suppression réussie.');
+      res.json({'message': 'Suppression réussie.'});
+    });
+    
+
+   
 module.exports = app;
 
 
