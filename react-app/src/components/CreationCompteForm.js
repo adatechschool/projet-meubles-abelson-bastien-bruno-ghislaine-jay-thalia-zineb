@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { NavLink } from "react-router-dom";
 
-function LoginForm() {
+function CreationCompteForm() {
   return (
     <Form id="login-form" style={{width:"30%",margin: "0 auto"}}>
       <Form.Group className="mb-3" controlId="formBasicEmail" style={{ backgroundColor: "#DDE5B6" }}>
@@ -20,17 +20,34 @@ function LoginForm() {
         <Form.Label style={{ backgroundColor: "#DDE5B6" }}>Mot de passe</Form.Label>
         <Form.Control type="password" placeholder="Mot de passe" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      <Form.Group className="mb-3" controlId="formBasicPassword" style={{ backgroundColor: "#DDE5B6" }}>
+        <Form.Label style={{ backgroundColor: "#DDE5B6" }}>Ressaisissez votre mot de passe</Form.Label>
+        <Form.Control type="password" placeholder="Mot de passe" />
       </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Label>Vos meubles préférés</Form.Label>
+        <div id="liste-meubles">
+          <div class="colonne-meubles">
+        <Form.Check type="checkbox" label="Table"/>
+        <Form.Check type="checkbox" label="Armoire"/>
+        <Form.Check type="checkbox" label="Chaise"/>
+          </div>
+          <div class="colonne-meubles">
+        <Form.Check type="checkbox" label="Lit"/>
+        <Form.Check type="checkbox" label="Bureau"/>
+        <Form.Check type="checkbox" label="Buffet"/>
+        </div>
+        </div>
+
+      </Form.Group>
+
       <Button variant="primary" type="submit">
         Valider
       </Button>
-      <br />
-      <NavLink to="/creationcompte" style={{ backgroundColor: "#DDE5B6" }}>Pas encore inscrit ? Créer votre compte ici.</NavLink>
 
     </Form>
 
   );
 }
 
-export default LoginForm;
+export default CreationCompteForm;

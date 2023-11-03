@@ -11,6 +11,7 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import BoutonSuppr from "./BoutonSuppr";
 import BoutonPayer from "./BoutonPayer";
 import mastercard from '../assets/images/logo-mastercard.png';
@@ -22,7 +23,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function PanierForm() {
   return (
-    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <section className="h-100 h-custom" style={{ backgroundColor: "#F0EAD2" }}>
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol>
@@ -31,10 +32,7 @@ function PanierForm() {
                 <MDBRow>
                   <MDBCol lg="7">
                     <MDBTypography tag="h5">
-                      <a href="" className="text-body">
-                        <MDBIcon fas icon="long-arrow-alt-left me-2" />{" "}
-                        Continuer mon shopping
-                      </a>
+                    <NavLink to="/">Continuer mon shopping</NavLink>
                     </MDBTypography>
 
                     <hr />
@@ -232,32 +230,32 @@ function PanierForm() {
                       style={{ backgroundColor: "#A98467" }}
                     >
                 <div id="encart-panier">
-                      <MDBCardBody>
+                      <MDBCardBody style={{ backgroundColor: "#A98467" }} >
                       
-                        <div className="d-flex justify-content-between align-items-center mb-4">
-                          <MDBTypography tag="h5" className="mb-0">
+                        <div className="d-flex justify-content-between align-items-center mb-4" style={{ backgroundColor: "#A98467" }} >
+                          <MDBTypography tag="h5" className="mb-0" style={{ backgroundColor: "#A98467" }} >
                             Détails carte bancaire
                           </MDBTypography>
                         </div>
 
-                        <p>Type de carte bancaire :</p>
-                        <div id="cartes-bancaires">
+                        <p style={{ backgroundColor: "#A98467" }} >Type de carte bancaire :</p>
+                        <div id="cartes-bancaires" style={{ backgroundColor: "#A98467" }} >
                         <a href="#!" type="submit" className="text-white">
-                        <img src={mastercard} alt="Logo Mastercard" style={{height:"50px"}} />
+                        <img src={mastercard} alt="Logo Mastercard" style={{height:"50px", backgroundColor: "#A98467"}} />
                         </a>
                         <a href="#!" type="submit" className="text-white">
-                        <img src={visa} alt="Logo Visa" style={{height:"50px"}} />
+                        <img src={visa} alt="Logo Visa" style={{height:"50px", backgroundColor: "#A98467"}} />
                         </a>
                         <a href="#!" type="submit" className="text-white">
-                        <img src={americanexpress} alt="Logo American Express" style={{height:"50px"}} />
+                        <img src={americanexpress} alt="Logo American Express" style={{height:"50px", backgroundColor: "#A98467"}} />
                         </a>
                         <a href="#!" type="submit" className="text-white">
-                        <img src={paypal} alt="Logo Paypal" style={{height:"50px"}} />
+                        <img src={paypal} alt="Logo Paypal" style={{height:"50px", backgroundColor: "#A98467"}} />
                         </a>
                         </div>
 
-                        <form className="mt-4">
-                          <p>Nom du titulaire</p>
+                        <form className="mt-4" style={{ backgroundColor: "#A98467" }} >
+                          <p style={{ backgroundColor: "#A98467" }} >Nom du titulaire</p>
                           <MDBInput
                             className="mb-4"
                             type="text"
@@ -265,7 +263,7 @@ function PanierForm() {
                             placeholder="Nom du titulaire de la carte bancaire"
                             contrast
                           />
-                          <p>Numéro de carte</p>
+                          <p style={{ backgroundColor: "#A98467" }} >Numéro de carte</p>
                           <MDBInput
                             className="mb-4"
                             type="text"
@@ -276,9 +274,9 @@ function PanierForm() {
                             contrast
                           />
 
-                          <MDBRow className="mb-4">
-                            <MDBCol md="6">
-                              <p>Expiration</p>
+                          <MDBRow className="mb-4" style={{ backgroundColor: "#A98467" }} >
+                            <MDBCol md="6" style={{ backgroundColor: "#A98467" }} >
+                              <p style={{ backgroundColor: "#A98467" }} >Expiration</p>
                               <MDBInput
                                 className="mb-4"
                                 type="text"
@@ -289,8 +287,8 @@ function PanierForm() {
                                 contrast
                               />
                             </MDBCol>
-                            <MDBCol md="6">
-                              <p>CVV</p>
+                            <MDBCol md="6" style={{ backgroundColor: "#A98467" }} >
+                              <p style={{ backgroundColor: "#A98467" }} >CVV</p>
                               <MDBInput
                                 className="mb-4"
                                 type="text"
@@ -306,19 +304,19 @@ function PanierForm() {
 
                         <hr />
 
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Sous-total</p>
-                          <p className="mb-2">4798.00€</p>
+                        <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Sous-total</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4798.00€</p>
                         </div>
 
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Livraison</p>
-                          <p className="mb-2">20.00€</p>
+                        <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Livraison</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >20.00€</p>
                         </div>
 
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Total (dont TVA)</p>
-                          <p className="mb-2">4818.00€</p>
+                        <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Total (dont TVA)</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4818.00€</p>
                         </div>
 
                         <BoutonPayer />

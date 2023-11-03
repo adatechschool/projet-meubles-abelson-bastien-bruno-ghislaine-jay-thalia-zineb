@@ -73,7 +73,7 @@ h1 {
 }
 
 .btn-suppr::after {
-  content: "delete";
+  content: "supprimer";
   position: absolute;
   top: -130%;
   left: 50%;
@@ -321,6 +321,7 @@ h1 {
   justify-content: space-around;
 }
 
+
 /* Page Details produits */
 
 .title{
@@ -364,3 +365,14 @@ span{
 }
 
 
+
+/* creation compte */
+#liste-meubles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colonne-meubles {
+  flex: 1;
+  padding: 0 10px;
+}
