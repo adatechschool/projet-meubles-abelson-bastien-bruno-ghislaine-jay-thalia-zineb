@@ -8,7 +8,12 @@ const Accueil = () => {
     return (
         <div>       
             <BarreNav />
+
             <h2>ACCUEIL</h2>
+
+            <h3>Bienvenue sur Recycl'Interieurs,
+            <br />votre destination en ligne pour trouver des meubles de seconde main de qualité et abordables</h3>
+
             <div id="cartes-produits">
             <CarteProduit />
             <CarteProduit />
