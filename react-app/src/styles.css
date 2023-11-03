@@ -73,7 +73,7 @@ h1 {
 }
 
 .btn-suppr::after {
-  content: "delete";
+  content: "supprimer";
   position: absolute;
   top: -130%;
   left: 50%;
