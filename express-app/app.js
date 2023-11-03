@@ -74,67 +74,86 @@ app.get("/api/meuble", async (req, res) => {
     } 
 });
 
+app.put('/api/update/:id', (req, res) => {
+     const client = new MongoClient(uri);   
+     const database = client.db('meubles');
+     const collection = database.collection('meubles')
+    const id =  req.params.id;
+    const miseAJour =  req.body; // Nouvelles données à mettre à jour
+            console.log("toto");
+            console.log(req.body);
+            console.log("tata");
+    collection.updateOne({ id:Number(id) }, { $set: miseAJour }, (err, res) => {
+      if (err) {
+        console.error('Erreur lors de la mise à jour', err);
+        res.status(500).json({ 'message': 'Erreur lors de la mise à jour.' });
+        return;
+      }
+      res.json({ 'message': 'Mise à jour réussie.' });
+    });
+  });
+
 module.exports = app;
 
 
 
-main().catch(err => console.log(err));
+// main().catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect(process.env.MONGO_URL);
+// async function main() {
+//   await mongoose.connect(process.env.MONGO_URL);
 
-  // création du modèle Meuble (qui va créer automatiquement la collections "meubles" dans la base de données lorsqu'on va créer les différents meubles juste après)
-  const Meuble = mongoose.model('Meuble', {
-    id: Number,
-    name: String,
-    type: String,
-    price: Number,
-    materials: Array,
-    colors: Array,
-    size: String
-  });
+//   // création du modèle Meuble (qui va créer automatiquement la collections "meubles" dans la base de données lorsqu'on va créer les différents meubles juste après)
+//   const Meuble = mongoose.model('Meuble', {
+//     id: Number,
+//     name: String,
+//     type: String,
+//     price: Number,
+//     materials: Array,
+//     colors: Array,
+//     size: String
+//   });
 
-  // création des différents meubles
-  const firstMeuble = new Meuble({
-    id: 7,
-    name: "Etagère Kallax",
-    type: "Etagère",
-    price: 74,
-    materials: ["panneau de particules", "feuille de mélamine"],
-    colors: ["blanc"],
-    size: "77x147"
-  });
+//   // création des différents meubles
+//   const firstMeuble = new Meuble({
+//     id: 7,
+//     name: "Etagère Kallax",
+//     type: "Etagère",
+//     price: 74,
+//     materials: ["panneau de particules", "feuille de mélamine"],
+//     colors: ["blanc"],
+//     size: "77x147"
+//   });
 
-  const secondMeuble = new Meuble({
-    id: 8,
-    name: "Banc TV Besta",
-    type: "Banc TV",
-    price: 182,
-    materials: ["contreplaqué", "panneau de particules"],
-    colors: ["blanc brillant","chêne blanchi"],
-    size: "120x42x39"
-  });
+//   const secondMeuble = new Meuble({
+//     id: 8,
+//     name: "Banc TV Besta",
+//     type: "Banc TV",
+//     price: 182,
+//     materials: ["contreplaqué", "panneau de particules"],
+//     colors: ["blanc brillant","chêne blanchi"],
+//     size: "120x42x39"
+//   });
 
-  const thirdMeuble = new Meuble({
-    id: 9,
-    name: "Fauteil Pello",
-    type: "Fauteil",
-    price: 69,
-    materials: ["Placage bois lamellé-collé, placage bouleau, vernis acrylique incolore", "tissu", "acier"],
-    colors: ["gris", "beige","noir"],
-    size: "96x85x50"
-  });
+//   const thirdMeuble = new Meuble({
+//     id: 9,
+//     name: "Fauteil Pello",
+//     type: "Fauteil",
+//     price: 69,
+//     materials: ["Placage bois lamellé-collé, placage bouleau, vernis acrylique incolore", "tissu", "acier"],
+//     colors: ["gris", "beige","noir"],
+//     size: "96x85x50"
+//   });
 
-  console.log(firstMeuble, secondMeuble, thirdMeuble);
-  await firstMeuble.save();
-  await secondMeuble.save();
-  await thirdMeuble.save();
+//   console.log(firstMeuble, secondMeuble, thirdMeuble);
+//   await firstMeuble.save();
+//   await secondMeuble.save();
+//   await thirdMeuble.save();
 
-    try {
-        const updateBureau = await collection.updateOne({ name: "Bureau gamer Sköptuflun" }, {
-        $set: { images: ["", "blanc"] }
-        });
-        console.log(await updateBureau);
-    } catch(e) {throw e; }
+//     try {
+//         const updateBureau = await collection.updateOne({ name: "Bureau gamer Sköptuflun" }, {
+//         $set: { images: ["", "blanc"] }
+//         });
+//         console.log(await updateBureau);
+//     } catch(e) {throw e; }
 
-}
+// }
