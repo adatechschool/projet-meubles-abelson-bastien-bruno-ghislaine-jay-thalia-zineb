@@ -8,7 +8,7 @@ import chaise2 from '../../src/assets/images/chaise2.jpg';
 
 const Carroussel = () => {
     return (
-        <div id="carrousel" style={{ width:"20%",margin: "0 auto" }}>
+        <div id="carrousel">
             <Carousel data-bs-theme="dark">
                 <Carousel.Item >
                     <img
