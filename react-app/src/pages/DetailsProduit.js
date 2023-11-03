@@ -14,8 +14,7 @@ const DetailsProduit = () => {
 
             <div class="float-end">
                 <h1>description</h1>
-            </div>
-            
+            </div>  
          </div>
        
     );

@@ -7,7 +7,7 @@ const Login = () => {
     return (
         <div>
             <BarreNav />
-            <h1>Connection</h1>
+            <h1>Connexion</h1>
             <br />
             <br />
             <LoginForm />

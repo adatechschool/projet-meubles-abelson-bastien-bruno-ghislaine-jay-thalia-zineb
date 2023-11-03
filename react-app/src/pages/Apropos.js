@@ -5,10 +5,13 @@ const Apropos = () => {
   return (
     <div>
        <BarreNav />
+       <div id="a-propos">
        <h1>
-        Bienvenue sur (Nom du Site), votre destination en ligne pour trouver des
-        meubles de seconde main de qualité et abordables.
+        Bienvenue sur (Nom du Site), 
+        <br />votre destination en ligne pour trouver des
+        meubles de seconde main de qualité et abordables
       </h1>
+      <br />
       <p>
         Nous sommes ravis de vous présenter notre plateforme dédiée à la
         découverte de trésors cachés qui peuvent transformer votre espace de
@@ -74,6 +77,7 @@ const Apropos = () => {
         <br />
         Bienvenue chez [Nom du Site] - où le style rencontre la durabilité !
       </p>
+      </div>
       </div>
   );
 };

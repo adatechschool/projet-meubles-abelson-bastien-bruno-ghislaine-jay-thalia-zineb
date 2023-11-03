@@ -3,7 +3,7 @@ import '../styles.css'
 
 const BoutonAchat = () => {
   return (
-    <button class="button-achat">
+    <button class="button-achat" >
       <svg
         viewBox="0 0 16 16"
         class="bi bi-cart-check"

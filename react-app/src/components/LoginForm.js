@@ -11,7 +11,7 @@ function LoginForm() {
         <Form.Label>Adresse email</Form.Label>
         <Form.Control type="email" placeholder="Saisissez votre adresse email" />
         <Form.Text className="text-muted">
-          Nous ne divulguerons jamais votre adresse-email.
+          Nous ne divulguerons jamais votre adresse email.
         </Form.Text>
       </Form.Group>
 
@@ -25,6 +25,7 @@ function LoginForm() {
         Valider
       </Button>
     </Form>
+
   );
 }
 

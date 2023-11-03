@@ -7,7 +7,7 @@ marron foncé #6C584C
 */
 
 * {
-  /* background-color: #F0EAD2; */
+  background-color: #F0EAD2;
 }
 
 /* barre de nav */
@@ -21,9 +21,10 @@ header {
 
 header img {
   height: 5em;
+  background-color: #A98467;
 }
 
-header #menu {
+#menu {
   display: flex;
   width: 100%;
   align-items: stretch;
@@ -32,11 +33,9 @@ header #menu {
   color: #F0EAD2;
 }
 
-h1 {
-  font-family: "Cairo Play", sans-serif;
-  text-align: center;
-  padding-top: 0.5em;
-  flex: 4;
+header h1 {
+  background-color: #A98467;
+  border-right: 1px solid #dde5b6;
 }
 
 header #menu a {
@@ -49,12 +48,21 @@ header #menu a {
 }
 
 header #menu a:hover {
-  background-color: #F0EAD2;
-  color: #A98467;
+  background-color: #6C584C;
+  color: white;
 }
 
 header ul {
   list-style: none;
+}
+
+
+/* titres */
+h1 {
+  font-family: "Cairo Play", sans-serif;
+  text-align: center;
+  padding-top: 0.5em;
+  flex: 4;
 }
 
 /* bouton supprimer */
@@ -103,6 +111,70 @@ header ul {
   top: -160%;
 }
 
+/* bouton editer */
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
 /* bouton acheter */
 .button-achat {
   display: flex;
@@ -120,27 +192,94 @@ header ul {
 }
 
 .button-achat .button-acheter {
-  color: #f0ead2;
+  color: white;
+  background-color: #6c584c;
   font-weight: 700;
   font-size: 1em;
   transition: 400ms;
+  margin: 0 auto;
 }
 
 .button-achat svg path {
   transition: 400ms;
 }
 
+.button-achat svg {
+  background-color: #6c584c;
+}
+
+.button-achat:hover svg {
+  background-color: white;
+  color: #6c584c;
+}
+
 .button-achat:hover {
-  background-color: transparent;
+  background-color: white;
+  color: #6c584c;
 }
 
 .button-achat:hover .button-acheter {
+  background-color: white;
   color: #6c584c;
 }
 
 .button-achat:hover svg path {
   fill: #6c584c;
 }
+
+/* bouton payer */
+
+.bouton-payer {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.bouton-payer::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.bouton-payer:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.bouton-payer:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
+/* login */
 
 #login-form {
   background-color: #DDE5B6;
@@ -151,4 +290,33 @@ header ul {
   background-color: #ADC178;
   border-color: #A98467;
   color:white;
+}
+
+/* panier */
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
+
+#encart-panier {
+  background-color: #A98467;
+}
+
+#cartes-bancaires {
+  display: flex;
+  justify-content: space-around;
+}
+
+#a-propos {
+  background-color: #F0EAD2;
+  width: 85%;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+/* page accueil */
+#cartes-produits {
+  display: flex;
+  justify-content: space-around;
 }
