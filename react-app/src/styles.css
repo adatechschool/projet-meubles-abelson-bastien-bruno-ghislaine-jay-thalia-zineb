@@ -320,3 +320,14 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
+
+/* creation compte */
+#liste-meubles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colonne-meubles {
+  flex: 1;
+  padding: 0 10px;
+}
