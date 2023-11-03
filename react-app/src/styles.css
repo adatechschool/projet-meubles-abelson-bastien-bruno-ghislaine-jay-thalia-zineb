@@ -320,3 +320,47 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
+
+/* Page Details produits */
+
+.title{
+  margin: 20px;
+}
+
+.imgSize{
+  width: 400px; 
+  height: 450px;
+  border: solid 1px #6c584c ;
+}
+
+.display{
+ padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+span{
+  color:red;
+  font-weight: bold;
+}
+
+.green{
+  background:rgb(153, 197, 153) ;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  padding:auto;
+  
+}
+
+.red{
+  background:red ;
+  width: 170px;
+  height: 25px;
+  text-align: center;
+  padding:auto;
+
+}
+
+
