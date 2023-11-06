@@ -9,7 +9,7 @@ marron foncé #6C584C
 */
 
 * {
-  background-color: #F0EAD2;
+  /* background-color: #fffef8; */
    font-family: 'Lora', serif;
 }
 
@@ -338,6 +338,8 @@ h3 {
 }
 
 
+
+
 /* Page Details produits */
 
 .title{
@@ -392,3 +394,8 @@ span{
   flex: 1;
   padding: 0 10px;
 }
+
+/* .interieur{
+ background: url(../src/assets/images/interieur.jpg) no-repeat center fixed;
+ background-size: cover;
+} */

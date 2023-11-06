@@ -6,6 +6,8 @@ const Admin = () => {
       <div>
           <BarreNav />
           <h2>ADMIN</h2>
+          <div className="interieur"></div>
+       
       </div>
       
     );

@@ -7,7 +7,7 @@ const Apropos = () => {
        <BarreNav />
        <div id="a-propos">
        <h2>
-        Bienvenue sur (Nom du Site), 
+        Bienvenue sur Vintage Gallery, 
         <br />votre destination en ligne pour trouver des
         meubles de seconde main de qualité et abordables
       </h2>
@@ -19,14 +19,14 @@ const Apropos = () => {
       </p>
       <h2>Notre Histoire</h2>
       <p>
-        (nom du site) a vu le jour de la passion pour la durabilité, le design
+        Vintage Gallery a vu le jour de la passion pour la durabilité, le design
         intemporel et le désir de rendre les meubles de qualité accessibles à
         tous. Notre équipe est composée de passionnés de mobilier, de durabilité
         et de style, et nous mettons cette passion au service de nos clients.
       </p>
       <h2>Notre Mission</h2>
       <p>
-        Chez (Nom du Site), notre mission est de promouvoir la réutilisation et
+        Chez Vintage Gallery, notre mission est de promouvoir la réutilisation et
         la réduction de l'impact environnemental en donnant une seconde vie aux
         meubles. Nous croyons fermement que chaque meuble mérite une nouvelle
         chance de briller et d'embellir un foyer. Nous sommes déterminés à
@@ -41,7 +41,7 @@ const Apropos = () => {
         trouverez sur [Nom du Site] a été soigneusement sélectionné, restauré si
         nécessaire, et est prêt à retrouver sa place dans votre intérieur.
       </p>
-      <h2>Pourquoi Choisir (Nom du Site) ?</h2>
+      <h2>Pourquoi Choisir Vintage Gallery?</h2>
       <p>
         <ul>
           <li>
@@ -66,8 +66,7 @@ const Apropos = () => {
             meuble parfait et répondre à toutes vos questions.
           </li>
         </ul>
-        Nous espérons que vous apprécierez votre expérience de shopping sur [Nom
-        du Site]. Explorez notre catalogue et trouvez le meuble idéal pour votre
+        Nous espérons que vous apprécierez votre expérience de shopping sur Vintage Gallery. Explorez notre catalogue et trouvez le meuble idéal pour votre
         maison tout en contribuant à la préservation de notre planète. Merci de
         faire partie de notre mission pour un avenir plus durable et élégant.
         <br />
@@ -75,7 +74,7 @@ const Apropos = () => {
         commentaires. Nous sommes impatients de vous accompagner dans votre
         voyage à la découverte de meubles uniques et de seconde main.
         <br />
-        Bienvenue chez [Nom du Site] - où le style rencontre la durabilité !
+        Bienvenue chez Vintage Gallery - où le style rencontre la durabilité !
       </p>
       </div>
       </div>

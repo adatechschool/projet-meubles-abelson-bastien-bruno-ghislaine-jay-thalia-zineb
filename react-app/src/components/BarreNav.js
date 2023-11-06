@@ -9,7 +9,7 @@ const BarreNav = () => {
 <header>
     <nav id="menu">
         <img src={logo} className="logo-site" alt="Logo de notre site de vente de meubles" />
-        <h1>Recycl' Interieurs</h1>
+        <h1>Vintage Gallery</h1>
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/apropos">A Propos</NavLink>
         <NavLink to="/login">Mon compte</NavLink>
