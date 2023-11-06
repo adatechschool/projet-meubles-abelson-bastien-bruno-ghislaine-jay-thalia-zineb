@@ -1,44 +1,51 @@
-import React from 'react';
-import Carroussel from '../components/Carroussel';
-import BarreNav from '../components/BarreNav';
-import BoutonAchat from '../components/BoutonAchat';
+import React from "react";
+import Carroussel from "../components/Carroussel";
+import BarreNav from "../components/BarreNav";
+import BoutonAchat from "../components/BoutonAchat";
+import { useEffect, useState } from "react";
 
 const DetailsProduit = () => {
-    return (
-        <div>
-             <BarreNav />
-            <div class="display">
-            <div className="display" class="float-start">
-            <Carroussel />
-            </div>
+  const [product, setProduct] = useState({});
 
-            <div>
-            <h2>Fauteuil en bois et cannage</h2>
-            <br/>
-            <p>Détails du produit</p>
-          
-            <p>COULEUR : Brun</p>
-            
-            <p>DIMENSION : L50,8 x l53 x 68cm</p>
-           
+  const fetchProductData = () => {
+    fetch("http://localhost:3001/api/meuble?id=2")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setProduct(data);
+      });
+  };
 
-            <p>Livraison à domicile, en magasin ou en relais Pickup</p>
-            <p class="green"> EN STOCK</p>
-            
-            <hr/>
-            <p class="text-end"><span>150 , 00 euros</span></p>
-            <BoutonAchat />
+  useEffect(() => {
+    fetchProductData();
+  }, []);
 
-
-            </div>  
-
-            </div>
-
-            
-
+  return (
+    <div>
+      <BarreNav />
+      <div class="display">
+        <div className="display float-start">
+          <Carroussel />
         </div>
-       
-    );
+
+        <div>
+          <h2>{product.name ?? ""}</h2>
+          <br />
+          <p>CATEGORIE : {product.type ?? ""}</p>
+          <p>COULEUR : {product.colors ?? ""}</p>
+          <p>DIMENSIONS : {product.size ?? ""} cm</p>
+          <p>Livraison à domicile, en magasin ou en relais Pickup</p>
+          <p className="green"> EN STOCK</p>
+          <hr />
+          <p className="text-end">
+            <span>Prix : {product.price ?? 0} euros</span>
+          </p>
+          <BoutonAchat />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default DetailsProduit;

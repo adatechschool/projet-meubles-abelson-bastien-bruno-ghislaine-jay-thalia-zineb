@@ -54,7 +54,7 @@ const Admin = () => {
         <option value="etat4">Rupture des stock</option>
         <option value="etat5">Retirer</option>
         </select></td>
-      <td> <EditAdmin />| <SaveAdmin /> | <BoutonSuppr /> </td>
+      <td> <EditAdmin /> <SaveAdmin /> <BoutonSuppr /> </td>
     </tr>
 
   </tbody>

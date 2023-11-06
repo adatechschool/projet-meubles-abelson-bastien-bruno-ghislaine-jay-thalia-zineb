@@ -21,6 +21,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, UPDATE')
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
+    res.setHeader('Access-Control-Allow-Credentials', true)
+    next()
+})
+
 const { MongoClient } = require("mongodb");
 const uri = "mongodb+srv://plateforme-meubles:73ttoMd4Zna135WV@cluster0.azgvepj.mongodb.net/";
 
