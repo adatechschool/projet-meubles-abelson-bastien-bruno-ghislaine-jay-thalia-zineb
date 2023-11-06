@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap");
 
 /* 
 beige #F0EAD2
@@ -10,13 +10,12 @@ marron foncé #6C584C
 
 * {
   /* background-color: #fffef8; */
-   font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
-
 
 /* barre de nav */
 header {
-  background-color: #A98467;
+  background-color: #a98467;
   display: flex;
   width: 80em;
   margin: 0 auto 2em auto;
@@ -25,7 +24,7 @@ header {
 
 header img {
   height: 5em;
-  background-color: #A98467;
+  background-color: #a98467;
 }
 
 #menu {
@@ -33,19 +32,18 @@ header img {
   width: 100%;
   align-items: stretch;
   border-left: 1px solid #dde5b6;
-  background-color: #A98467;
-  color: #F0EAD2;
+  background-color: #a98467;
+  color: #f0ead2;
 }
 
 header h1 {
-  background-color: #A98467;
+  background-color: #a98467;
   border-right: 1px solid #dde5b6;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: "Cinzel Decorative", serif;
   letter-spacing: 1px;
   text-align: center;
   padding-top: 0.5em;
   flex: 4;
-
 }
 
 header #menu a {
@@ -53,21 +51,20 @@ header #menu a {
   text-align: center;
   padding-top: 1em;
   border-right: 1px solid #dde5b6;
-  background-color: #A98467;
-  color: #F0EAD2;
+  background-color: #a98467;
+  color: #f0ead2;
   font-size: 20px;
   text-decoration: none;
 }
 
 header #menu a:hover {
-  background-color: #6C584C;
+  background-color: #6c584c;
   color: white;
 }
 
 header ul {
   list-style: none;
 }
-
 
 /* titres */
 h2 {
@@ -260,7 +257,7 @@ h3 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
   position: relative;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .svgIcon {
@@ -280,43 +277,43 @@ h3 {
   border-radius: 50%;
   left: -100%;
   top: 0;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   mix-blend-mode: difference;
 }
 
 .bouton-payer:hover::before {
-  transition-duration: .3s;
-  transform: translate(100%,-50%);
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
   border-radius: 0;
 }
 
 .bouton-payer:active {
-  transform: translate(5px,5px);
-  transition-duration: .3s;
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
 }
 
 /* login */
 
 #login-form {
-  background-color: #DDE5B6;
+  background-color: #dde5b6;
   padding: 3em;
 }
 
 #login-form button {
-  background-color: #ADC178;
-  border-color: #A98467;
-  color:white;
+  background-color: #adc178;
+  border-color: #a98467;
+  color: white;
 }
 
 /* panier */
 @media (min-width: 1025px) {
   .h-custom {
-  height: 100vh !important;
+    height: 100vh !important;
   }
-  }
+}
 
 #encart-panier {
-  background-color: #A98467;
+  background-color: #a98467;
 }
 
 #cartes-bancaires {
@@ -325,7 +322,7 @@ h3 {
 }
 
 #a-propos {
-  background-color: #F0EAD2;
+  background-color: #f0ead2;
   width: 85%;
   padding: 1em;
   margin: 0 auto;
@@ -337,52 +334,45 @@ h3 {
   justify-content: space-around;
 }
 
-
-
-
 /* Page Details produits */
 
-.title{
+.title {
   margin: 20px;
 }
 
-.imgSize{
-  width: 400px; 
+.imgSize {
+  width: 400px;
   height: 450px;
-  border: solid 1px #6c584c ;
+  border: solid 1px #6c584c;
 }
 
-.display{
- padding-top: 50px;
+.display {
+  padding-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-span{
-  color:red;
+span {
+  color: red;
   font-weight: bold;
 }
 
-.green{
-  background:rgb(153, 197, 153) ;
+.green {
+  background: rgb(153, 197, 153);
   width: 100px;
   height: 25px;
   text-align: center;
-  padding:auto;
-  
+  padding: auto;
 }
 
-.red{
-  background:red ;
+.red {
+  background: red;
   width: 170px;
   height: 25px;
   text-align: center;
-  padding:auto;
-
+  padding: auto;
 }
-
-
 
 /* creation compte */
 #liste-meubles {
@@ -399,3 +389,116 @@ span{
  background: url(../src/assets/images/interieur.jpg) no-repeat center fixed;
  background-size: cover;
 } */
+
+/* boutton add produit dans admin */
+.first-button {
+  background: rgb(115, 15, 209);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  min-height: 60px;
+  width: 400px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.6s;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.main-section:hover .second-button,
+.main-section:hover .first-button {
+  transform: translateY(-60px);
+}
+
+.second-button {
+  background: rgb(209, 15, 57);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  min-height: 60px;
+  width: 400px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.6s;
+}
+/* fin boutton add produit dans admin */
+
+/* boutton edit dans admin */
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+/* fin boutton edit dans admin* /
+/**/
+
+/**/
