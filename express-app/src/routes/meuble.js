@@ -40,7 +40,18 @@ router.put('/meubles/:id', async function(req, res){
         if (!meuble) return res.status(404).send("Meuble introuvable");
         res.send(meuble);
     } catch (err) {
-        console.log(err);
+        res.status(500).send(err);
+    }
+});
+router.delete('/meubles/:id', async function(req, res) {
+    const meubleId = req.params.id;
+    
+    try {
+        const meuble = await meubleSchema.findByIdAndDelete(meubleId);
+
+        if (!meuble) return res.status(404).send("Meuble introuvable");
+        res.send(meuble);
+    }catch (err) {
         res.status(500).send(err);
     }
 });
