@@ -4,9 +4,9 @@ const router = new express.Router();
 
 router.post('/login', async function(req, res){
     try { const {username,password} = req.body;
-        console.log(username, password);
         const profil = await profilSchema.findProfil(req.body.username, req.body.password);
-        res.send(profil)
+        const authToken = await profil.generateAuthTokenAndSaveUser();
+        res.send({ profil, authToken });
     }catch(err){
         console.log(err);
         res.status(400).send(err);
