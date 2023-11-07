@@ -2,17 +2,31 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const app = express();
+const cors = require('cors');
 // pour lire les variables du fichier .env
 const meubleRoutes = require('./src/routes/meuble.js');
 const profilRoutes = require('./src/routes/profil.js');
 const { connectDb } = require('./src/services/mongoose.js');
 const port = process.env.PORT || 3001;
 
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,POST,DELETE,PUT',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true,
+};
+
+  
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(meubleRoutes);
 app.use(profilRoutes);
+
+
+
 
 app.listen(port,()=>{
     console.log(`le serveur est lancé sur http://localhost:${port}`);

@@ -8,7 +8,7 @@ const DetailsProduit = () => {
   const [product, setProduct] = useState({});
 
   const fetchProductData = () => {
-    fetch("http://localhost:3001/api/meuble?id=2")
+    fetch("http://localhost:3001/meubles/6540d6cd9893e5a496d9b570")
       .then((response) => {
         return response.json();
       })
@@ -33,8 +33,9 @@ const DetailsProduit = () => {
           <h2>{product.name ?? ""}</h2>
           <br />
           <p>CATEGORIE : {product.type ?? ""}</p>
-          <p>COULEUR : {product.colors ?? ""}</p>
+          <p>COULEUR : {product.colors ? product.colors.join(', ') : ""}</p>
           <p>DIMENSIONS : {product.size ?? ""} cm</p>
+          <p>COMPOSITION : {product.materials ? product.materials.join(', ') : ""}</p>
           <p>Livraison à domicile, en magasin ou en relais Pickup</p>
           <p className="green"> EN STOCK</p>
           <hr />
