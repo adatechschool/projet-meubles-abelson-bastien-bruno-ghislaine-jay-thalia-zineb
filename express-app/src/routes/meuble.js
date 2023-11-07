@@ -28,4 +28,23 @@ router.get('/meubles/:id',async function(req, res){
         res.status(500).send(err);
     }
 });
+router.put('/meubles/:id', async function(req, res){
+    const updatedInfo = Object.keys(req.body);
+    const meubleId = req.params.id;
+    
+    try {
+        const meuble = await meubleSchema.findById(meubleId);
+        updatedInfo.forEach(update => meuble[update]=req.body[update]);
+        await meuble.save();
+
+        if (!meuble) return res.status(404).send("Meuble introuvable");
+        res.send(meuble);
+    } catch (err) {
+        console.log(err);
+        res.status(500).send(err);
+    }
+});
+
+
+
 module.exports = router;
