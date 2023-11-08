@@ -76,7 +76,7 @@ const Admin = () => {
                     </ul></td>
                   <td>
                     <img
-                      src={`http://localhost:3001/${product.images[0]}`}
+                      src={`http://localhost:3001/${product.images[0]}`} rounded
                       alt={product.name}
                       height={150}
                       width={150}
