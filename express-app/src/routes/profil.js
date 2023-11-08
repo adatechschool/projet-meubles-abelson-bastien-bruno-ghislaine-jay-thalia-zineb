@@ -1,5 +1,6 @@
 const express = require('express');
 const profilSchema = require('../models/profil');
+const authentification = require('../middlewares/authentification');
 const router = new express.Router();
 
 router.post('/login', async function(req, res){
@@ -13,4 +14,5 @@ router.post('/login', async function(req, res){
     }
 
 });
+
 module.exports = router;

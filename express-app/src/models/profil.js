@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const { MongoCompatibilityError } = require('mongodb');
 
 
 const profilSchema = new mongoose.Schema({
     username :{
         type: String,
+        unique: true,
         required: true
     },
     password :{
         type: String,
+        unique: true,
         required: true
     },
     authTokens :[{
@@ -26,9 +29,13 @@ profilSchema.methods.generateAuthTokenAndSaveUser = async function() {
     return authToken;
 }    
 
-profilSchema.statics.findProfil =  async function (username, password) {
+profilSchema.statics.findProfil =  async (username, password) => {
     const profil = await Profil.findOne({ username });
-    if (!profil) throw new Error("pas de user");
+    if (!profil) {
+        throw new Error("Pas de profil existant !");}
+    // const isPasswordValid = await profil.comparePassword(password);
+    if (profil.password !== password) {
+        throw new Error('Erreur de mot de passe !');}
     return profil;
   }
   
