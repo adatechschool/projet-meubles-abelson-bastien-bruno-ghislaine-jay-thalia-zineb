@@ -1,49 +1,27 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import chaise from '../../src/assets/images/chaise.jpg';
-import table_basse from '../../src/assets/images/table_basse.jpg';
-import chaise2 from '../../src/assets/images/chaise2.jpg';
-
-
-
+import { useLocation } from 'react-router-dom';
 const Carroussel = () => {
-    return (
-        <div id="carrousel">
-            <Carousel data-bg-theme="dark">
-                <Carousel.Item >
-                    <img
-                        className="d-block w-100"
-                        class = "imgSize"
-                        src={chaise}
-                        alt="First slide"
-                    />
-                
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={table_basse}
-                        alt="Second slide"
-                        class = "imgSize"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={chaise2}
-                        alt="Third slide"
-                        class = "imgSize"
-                    />
-                    
-                </Carousel.Item>
-            </Carousel>
-        </div>
-
-
-
-
-    );
-
+  const location = useLocation();
+  const product = location.state; // Récupérez les données du produit depuis l'emplacement de navigation
+  // Assurez-vous que product.images est défini avant de l'utiliser
+  if (!product || !product.images) {
+    return null; // Ou affichez un message d'erreur si les données du produit ne sont pas disponibles
+  }
+  return (
+    <div id="carrousel">
+      <Carousel >
+        {product.images.map((image, index) => (
+          <Carousel.Item key={index}>
+            <img
+              className="d-block w-100 imgSize"
+              src={`http://localhost:3001/${image}`}
+              alt={`Slide ${index + 1}`}
+            />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
 };
-
 export default Carroussel;

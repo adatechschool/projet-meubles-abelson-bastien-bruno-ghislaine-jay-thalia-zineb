@@ -3,23 +3,27 @@ import Carroussel from "../components/Carroussel";
 import BarreNav from "../components/BarreNav";
 import BoutonAchat from "../components/BoutonAchat";
 import { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 
 const DetailsProduit = () => {
-  const [product, setProduct] = useState({});
+  // const [product, setProduct] = useState({});
 
-  const fetchProductData = () => {
-    fetch("http://localhost:3001/meubles/6540d6cd9893e5a496d9b570")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setProduct(data);
-      });
-  };
+  // const fetchProductData = () => {
+  //   fetch("http://localhost:3001/meubles/6540d6cd9893e5a496d9b570")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setProduct(data);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchProductData();
-  }, []);
+  // useEffect(() => {
+  //   fetchProductData();
+  // }, []);
+
+  const location = useLocation();
+  const product = location.state;
 
   return (
     <div>

@@ -40,7 +40,7 @@ const Admin = () => {
       </>
       <>
         <div>
-          <table class="table table-bordered table-dark">
+          <table class="table table-bordered table-white">
             <thead>
               <tr>
                 <th scope="col">#</th>
