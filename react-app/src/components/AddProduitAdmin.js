@@ -4,7 +4,7 @@ import '../styles.css';
 const AddProduitAdmin = () => {
     return (
         <div class="main-section">
-    <button class="first-button"> Hover Me </button>
+    
     <button class="second-button"> 
     <svg viewBox="0 0 24 24" 
         width="20" 

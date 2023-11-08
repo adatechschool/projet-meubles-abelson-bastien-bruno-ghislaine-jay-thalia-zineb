@@ -125,7 +125,7 @@ h3 {
 
 .edit-button::before {
   display: none;
-  content: "Edit";
+  content: "éditer";
   color: white;
   transition-duration: 0.3s;
   font-size: 2px;
@@ -343,20 +343,6 @@ span {
 } */
 
 /* boutton add produit dans admin */
-.first-button {
-  background: rgb(115, 15, 209);
-  color: #fff;
-  border: none;
-  font-weight: 700;
-  font-size: 1em;
-  min-height: 60px;
-  width: 400px;
-  gap: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.6s;
-}
 
 .main-section {
   display: flex;
@@ -364,11 +350,6 @@ span {
   height: 60px;
   overflow: hidden;
   align-items: flex-start;
-}
-
-.main-section:hover .second-button,
-.main-section:hover .first-button {
-  transform: translateY(-60px);
 }
 
 .second-button {
@@ -450,6 +431,7 @@ span {
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
+  font-size: 15px;
 }
 
 .IconContainer {
@@ -548,7 +530,7 @@ span {
 
 .delete-button::before {
   display: none;
-  content: "Delete";
+  content: "supprimer";
   color: white;
   transition-duration: 0.3s;
   font-size: 2px;
