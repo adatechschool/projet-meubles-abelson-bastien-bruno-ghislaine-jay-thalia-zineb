@@ -2,16 +2,15 @@ import React from "react";
 import '../styles.css';
 import BoutonAchat from './BoutonAchat';
 import Card from 'react-bootstrap/Card';
-import table from '../assets/images/table_basse.jpg';
 
-const CarteProduit = () => {
+const CarteProduit = ( {product} ) => {
   return (
     <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" img src={table} alt="Photo du produit" style={{ height:'15rem' }} />
+    <Card.Img variant="top" img src={`http://localhost:3001/${product.images[0]}`} alt="Photo du produit" style={{ height:'15rem' }} />
     <Card.Body style = {{ backgroundColor: 'white' }} >
-      <Card.Title style = {{ backgroundColor: 'white' }} >Table basse</Card.Title>
-      <Card.Text style = {{ backgroundColor: 'white' }} >Table</Card.Text>
-      <Card.Text style = {{ backgroundColor: 'white' }} >200€</Card.Text>
+      <Card.Title style = {{ backgroundColor: 'white' }} >{product.name}</Card.Title>
+      <Card.Text style = {{ backgroundColor: 'white' }} >{product.type}</Card.Text>
+      <Card.Text style = {{ backgroundColor: 'white' }} >{product.price} €</Card.Text>
       <BoutonAchat />
     </Card.Body>
   </Card>

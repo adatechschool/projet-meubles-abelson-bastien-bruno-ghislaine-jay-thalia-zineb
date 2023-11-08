@@ -1,35 +1,40 @@
 import React from 'react';
 import BarreNav from '../components/BarreNav';
 import CarteProduit from '../components/CarteProduit';
-
+import { useEffect, useState } from "react";
 
 
 const Accueil = () => {
-    return (
-        <div>       
-            <BarreNav />
-            <h2><b>Nouveautés</b></h2>
+  const [products, setProducts] = useState([]);
 
-            <br/>
-            
-            {/* <h3>Bienvenue sur Recycl'Interieurs,
-            <br />votre destination en ligne pour trouver des meubles de seconde main de qualité et abordables</h3> */}
+  const fetchProductData = () => {
+    fetch("http://localhost:3001/meubles/all")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      });
+  };
 
-            <div id="cartes-produits">
-            <CarteProduit />
-            <CarteProduit />
-            <CarteProduit /> 
-            </div>  
-            <br/>   
-            <div id="cartes-produits">
-            <CarteProduit />
-            <CarteProduit />
-            <CarteProduit /> 
-            </div>     
-            
-        </div>
-        
-    );
+  useEffect(() => {
+    fetchProductData();
+  }, []);
+
+  return (
+    <div>
+    <BarreNav />
+    <h2><b>Nouveautés</b></h2>
+    <br />
+
+    <div id="cartes-produits">
+      {products.map((product, index) => (
+        <CarteProduit key={index} product={product} />
+      ))}
+    </div>
+    <br />
+  </div>
+);
 };
 
 export default Accueil;

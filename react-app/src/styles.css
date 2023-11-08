@@ -565,3 +565,12 @@ span {
   transition-duration: 0.3s;
 }
 /* fin boutton supprimer */
+
+#cartes-produits {
+  display: flex;
+  width: 95%;
+  margin: 2em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
