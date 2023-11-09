@@ -306,17 +306,17 @@ function PanierForm() {
 
                         <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
                           <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Sous-total</p>
-                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4798.00€</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4798,00€</p>
                         </div>
 
                         <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
                           <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Livraison</p>
-                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >20.00€</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >20,00€</p>
                         </div>
 
                         <div className="d-flex justify-content-between" style={{ backgroundColor: "#A98467" }} >
                           <p className="mb-2" style={{ backgroundColor: "#A98467" }} >Total (dont TVA)</p>
-                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4818.00€</p>
+                          <p className="mb-2" style={{ backgroundColor: "#A98467" }} >4818,00€</p>
                         </div>
 
                         <BoutonPayer />

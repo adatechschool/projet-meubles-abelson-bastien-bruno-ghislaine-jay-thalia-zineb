@@ -555,3 +555,9 @@ span {
   align-content: space-between;
   flex-wrap: wrap;
 }
+
+#carte-indiv {
+  height: 460px;
+  display: flex;
+  align-content: space-between;
+}

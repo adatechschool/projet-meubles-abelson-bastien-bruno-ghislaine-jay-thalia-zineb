@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Corrected import statement
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BarreNav from '../components/BarreNav';
 import CarteProduit from '../components/CarteProduit';
@@ -9,11 +9,12 @@ const Accueil = () => {
 
   const fetchProductData = () => {
     fetch("http://localhost:3001/meubles/all")
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         setProducts(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
       });
   };
 
@@ -32,11 +33,16 @@ const Accueil = () => {
       <br />
 
       <div id="cartes-produits">
-        {products.map((product, index) => (
-          <div key={product._id} className="produit" onClick={() => handleProductClick(product)}>
-            <CarteProduit key={index} product={product} />
-          </div>
-        ))}
+        {products.length > 0 ? (
+          products.map((product) => (
+            <div key={product._id} className="produit" onClick={() => handleProductClick(product)}>
+              <CarteProduit product={product} />
+            </div>
+          ))
+        ) : (
+          // You can render a loading indicator or an appropriate message while data is being fetched
+          <p>Loading...</p>
+        )}
       </div>
       <br />
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter,Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 // import BoutonAchat from "./components/BoutonAchat";
 // import BoutonSuppr from "./components/BoutonSuppr";
 import Accueil from "./pages/Accueil";

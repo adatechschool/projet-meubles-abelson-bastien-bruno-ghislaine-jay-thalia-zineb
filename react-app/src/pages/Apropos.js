@@ -38,10 +38,10 @@ const Apropos = () => {
         Notre équipe parcourt régulièrement les marchés, les brocantes et les
         ventes aux enchères pour dénicher des meubles de qualité, allant des
         classiques du design aux pièces vintage uniques. Chaque article que vous
-        trouverez sur [Nom du Site] a été soigneusement sélectionné, restauré si
+        trouverez sur Vintage Gallery a été soigneusement sélectionné, restauré si
         nécessaire, et est prêt à retrouver sa place dans votre intérieur.
       </p>
-      <h2>Pourquoi Choisir Vintage Gallery?</h2>
+      <h2>Pourquoi Choisir Vintage Gallery ?</h2>
       <p>
         <ul>
           <li>
