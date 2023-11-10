@@ -60,3 +60,16 @@ Certaines contraintes de création sont imposées :
       
 ## Lancement du projet
 
+Lancement serveur Node.js :
+
+```bash
+cd express-app/
+node ./app.js
+```
+
+Lancement serveur local et exécution React.app :
+
+```bash
+cd react-app/
+npm start
+```
