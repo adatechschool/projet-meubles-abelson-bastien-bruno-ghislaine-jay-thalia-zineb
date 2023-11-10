@@ -34,18 +34,18 @@ Certaines contraintes de création sont imposées :
 
 ## Fonctionnalités ajoutées
 
-✅ utilisation d'un framework (React),
-✅ utilisation d'une bibliothèque CSS (Bootstrap),
-- ✅ conception d'une base de données non relationnelle (MongoDB),
-- ✅ utilisation d'un framework pour la gestion de la base de données (Mongoose),
-- ✅ page principale qui regroupe les meubles en vente,
-- ✅ encarts produits cliquables regroupant une photo, le type de meuble, le prix et un bouton pour l’acheter,
-- ✅ page détails produits regroupant une série de photos du meuble et les informations (type, prix, dimensions, couleurs, matières et un bouton d'achat),
-- ✅ page de connexion (non fonctionnelle),
-- ✅ page d'inscription utilisateurs (non fonctionnelle) avec email / mot de passe / types de meubles recherchés,
-- ✅ sécurisation des mots de passe (hashage),
-- ✅ page de gestion des produits présentant la liste des meubles,
-- ✅ page panier (non fonctionnelle),
+- [X] utilisation d'un framework (React),
+- [X] utilisation d'une bibliothèque CSS (Bootstrap),
+- [X] conception d'une base de données non relationnelle (MongoDB),
+- [X] utilisation d'un framework pour la gestion de la base de données (Mongoose),
+- [X] page principale qui regroupe les meubles en vente,
+- [X] encarts produits cliquables regroupant une photo, le type de meuble, le prix et un bouton pour l’acheter,
+- [X] page détails produits regroupant une série de photos du meuble et les informations (type, prix, dimensions, couleurs, matières et un bouton d'achat),
+- [X] page de connexion (non fonctionnelle),
+- [X] page d'inscription utilisateurs (non fonctionnelle) avec email / mot de passe / types de meubles recherchés,
+- [X] sécurisation des mots de passe (hashage),
+- [X] page de gestion des produits présentant la liste des meubles,
+- [X] page panier (non fonctionnelle),
 
 ## Reste à implémenter
 
