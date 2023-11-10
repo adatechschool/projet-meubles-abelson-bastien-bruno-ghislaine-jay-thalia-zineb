@@ -34,8 +34,8 @@ Certaines contraintes de création sont imposées :
 
 ## Fonctionnalités ajoutées
 
-- ✅ utilisation d'un framework (React),
-- ✅ utilisation d'une bibliothèque CSS (Bootstrap),
+✅ utilisation d'un framework (React),
+✅ utilisation d'une bibliothèque CSS (Bootstrap),
 - ✅ conception d'une base de données non relationnelle (MongoDB),
 - ✅ utilisation d'un framework pour la gestion de la base de données (Mongoose),
 - ✅ page principale qui regroupe les meubles en vente,
