@@ -68,35 +68,30 @@ router.get('/profils/me', authentification, async (req, res, next) => {
     res.send(req.profil);
   });
 
-// Mise à jour/modification d'un user avec PATCH (API REST) - Équivalent de UPDATE en CRUD
-router.patch('/profils/:id', authentification, async (req, res, next) => {
+// Mise à jour/modification du user connecté avec PATCH (API REST) - Équivalent de UPDATE en CRUD
+router.patch('/profils/me', authentification, async (req, res, next) => {
     // Création des infos qu'on update et stockage dans des clés/valeurs
     const updatedInfo = Object.keys(req.body);
-    // On récupère l'Id du user qui se trouve dans l'url
-    const profilId = req.params.id;
   
     try {
-      const profil = await Profil.findById(profilId);
-      updatedInfo.forEach(update => profil[update] = req.body[update]);
-      await profil.save();
-      
-      if (!profil) return res.status(404).send('Profile not found !');
-      res.send(profil);
+      updatedInfo.forEach(update => req.profil[update] = req.body[update]);
+      await req.profil.save();
+      res.send(req.profil);
     } catch(e) {
       res.status(500).send(e);
     }
   });
 
-// Suppression d'un user avec DELETE
-router.delete('/profils/:id', authentification, async (req, res, next) => {
-  // On récupère l'Id du meuble qui se trouve dans l'url
-  const profilId = req.params.id;
+// Suppression du compte du user connecté avec DELETE
+router.delete('/profils/me', authentification, async (req, res, next) => {
+    // on a accès à req.profil car il a été crée dans l'authentification 
   try {
-    const profil = await Profil.findByIdAndDelete(profilId);
-    if (!profil) return res.status(404).send('Profile not found !');
-    res.send(profil);
+    await Profil.findOneAndDelete({ _id: req.profil._id });
+    res.send(req.profil);
   } catch(e) {
+    console.log(e),
     res.status(500).send(e);
   }
 });
+
 module.exports = router;  

@@ -1,10 +1,24 @@
 const express = require('express');
 const meubleSchema = require('../models/meuble');
 
+//Création des routes
 const router = new express.Router();
 
+// Création des meubles avec POST (API REST) - Équivalent de CREATE en CRUD
+router.post('/meubles', async (req, res, next) => {
+    // Création d'un meuble en utilisant le modèle Meuble et les données envoyées par le client
+    const meuble = new meubleSchema(req.body);
 
-router.get('/meubles/all',async function(req, res){
+    try {
+    // Sauvegarde du nouveau meuble, envoi status 201 si OK ou 400 si echec
+    const saveMeuble = await meuble.save();
+    res.status(201).send(saveMeuble);
+    } catch(e) {
+    res.status(400).send(e);
+    }     
+});
+
+router.get('/meubles/all', async function(req, res){
     try{
         const meubles = await meubleSchema.find({})
         console.log(meubles);
@@ -16,7 +30,7 @@ router.get('/meubles/all',async function(req, res){
     }
 });
 
-router.get('/meubles/:id',async function(req, res){
+router.get('/meubles/:id', async function(req, res){
     const meubleId = req.params.id;
     try{
         const meuble = await meubleSchema.findById(meubleId);
